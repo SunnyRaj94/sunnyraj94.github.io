@@ -8,7 +8,7 @@
 // ==========================================
 const CONFIG = {
   // Update this filename whenever you upload a new PDF resume to the root folder
-  RESUME_PDF_PATH: 'SunnyRaj_MLE_DS_6+YOE.pdf'
+  RESUME_PDF_PATH: 'profile/Resume.pdf'
 };
 
 document.addEventListener('DOMContentLoaded', () => {
