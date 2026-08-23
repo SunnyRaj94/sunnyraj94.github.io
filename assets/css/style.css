@@ -88,3 +88,31 @@ body {
 .pulse-arrow {
   animation: pulse-flow 2s infinite ease-in-out;
 }
+
+/* Traveling Flow Particle Animation */
+@keyframes travel-vertically {
+  0% { top: 0%; opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+.flow-connector-vertical {
+  position: relative;
+  width: 2px;
+  height: 24px;
+  background: rgba(51, 65, 85, 0.6);
+  margin: 0 auto;
+}
+
+.flow-connector-vertical::after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 8px #38bdf8;
+  animation: travel-vertically 1.8s infinite linear;
+}
