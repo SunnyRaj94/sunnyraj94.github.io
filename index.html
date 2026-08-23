@@ -108,10 +108,14 @@
   </header>
 
   <!-- MAIN CONTENT CONTAINER -->
-  <main class="flex-grow pt-20">
+  <main class="flex-grow pt-20 relative overflow-hidden">
+
+    <!-- Ambient Glowing Graphics -->
+    <div class="glow-orb-sky -top-20 left-10 opacity-60"></div>
+    <div class="glow-orb-purple top-96 right-10 opacity-50"></div>
 
     <!-- SECTION: HERO / POSITIONING -->
-    <section id="about" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-b border-slate-800/80">
+    <section id="about" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-b border-slate-800/80 bg-grid-pattern relative">
       <div class="grid md:grid-cols-12 gap-12 items-center">
         
         <div class="md:col-span-8 space-y-6">
@@ -145,10 +149,18 @@
 
           <!-- Quick Badges -->
           <div class="flex flex-wrap gap-2 text-xs font-semibold text-slate-300">
-            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-sky-400">Agentic AI & LangGraph</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-indigo-400">Enterprise RAG</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-emerald-400">Databricks & AWS MLOps</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-purple-400">PySpark & Kafka</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-sky-400 flex items-center gap-1.5">
+              <i class="fa-solid fa-microchip text-xs"></i> Agentic AI & LangGraph
+            </span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-indigo-400 flex items-center gap-1.5">
+              <i class="fa-solid fa-database text-xs"></i> Enterprise RAG
+            </span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-emerald-400 flex items-center gap-1.5">
+              <i class="fa-solid fa-server text-xs"></i> Databricks & AWS MLOps
+            </span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-purple-400 flex items-center gap-1.5">
+              <i class="fa-solid fa-network-wired text-xs"></i> PySpark & Kafka
+            </span>
           </div>
 
           <!-- Contact Copy Buttons & Links -->
@@ -197,8 +209,9 @@
             
             <div class="space-y-4 relative z-10">
               <div class="flex items-center justify-between">
-                <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider">
-                  ⚡ Currently Building
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[11px] font-bold uppercase tracking-wider">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+                  LIVE RUNTIME ENGINE
                 </span>
                 <i class="fa-solid fa-microchip text-slate-500"></i>
               </div>
@@ -212,11 +225,16 @@
                 A modular runtime and management platform combining multi-agent graphs, custom tools, Model Context Protocol (MCP) servers, and human-in-the-loop (HITL) execution bounds.
               </p>
 
-              <div class="flex flex-wrap gap-1.5 pt-1">
-                <span class="px-2 py-1 rounded bg-slate-800 text-[11px] font-mono text-slate-300">LangGraph</span>
-                <span class="px-2 py-1 rounded bg-slate-800 text-[11px] font-mono text-slate-300">MCP</span>
-                <span class="px-2 py-1 rounded bg-slate-800 text-[11px] font-mono text-slate-300">HITL</span>
-                <span class="px-2 py-1 rounded bg-slate-800 text-[11px] font-mono text-slate-300">FastAPI</span>
+              <!-- Node Workflow Badges -->
+              <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800 space-y-2">
+                <div class="text-[10px] font-mono text-slate-400 uppercase">Architecture Pipeline</div>
+                <div class="flex items-center gap-1 text-[10px] font-mono text-slate-300 overflow-x-auto">
+                  <span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30">Router</span>
+                  <i class="fa-solid fa-chevron-right text-[8px] text-slate-600 pulse-arrow"></i>
+                  <span class="px-2 py-0.5 rounded bg-sky-500/20 text-sky-300 border border-sky-500/30">LangGraph</span>
+                  <i class="fa-solid fa-chevron-right text-[8px] text-slate-600 pulse-arrow"></i>
+                  <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">MCP Tools</span>
+                </div>
               </div>
             </div>
           </div>
@@ -227,35 +245,35 @@
     <!-- END SECTION: HERO / POSITIONING -->
 
     <!-- SECTION: PROMINENT IMPACT METRICS -->
-    <section id="impact" class="py-12 bg-slate-900/60 border-b border-slate-800/80">
+    <section id="impact" class="py-12 bg-slate-900/60 border-b border-slate-800/80 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
           
-          <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 space-y-1">
+          <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 space-y-1 hover:border-sky-500/40 transition-colors">
             <div class="text-3xl sm:text-4xl font-extrabold text-sky-400">6+</div>
             <div class="text-xs font-bold text-slate-200 uppercase tracking-wider">Years Experience</div>
             <div class="text-[11px] text-slate-400">AI / ML Systems Engineering</div>
           </div>
 
-          <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 space-y-1">
+          <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 space-y-1 hover:border-indigo-500/40 transition-colors">
             <div class="text-3xl sm:text-4xl font-extrabold text-indigo-400">2M+</div>
             <div class="text-xs font-bold text-slate-200 uppercase tracking-wider">Daily API Calls</div>
             <div class="text-[11px] text-slate-400">Real-Time ML Recommender</div>
           </div>
 
-          <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 space-y-1">
+          <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 space-y-1 hover:border-emerald-500/40 transition-colors">
             <div class="text-3xl sm:text-4xl font-extrabold text-emerald-400">70%</div>
             <div class="text-xs font-bold text-slate-200 uppercase tracking-wider">Faster Retrieval</div>
             <div class="text-[11px] text-slate-400">Azure AI Search Enterprise RAG</div>
           </div>
 
-          <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 space-y-1">
+          <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 space-y-1 hover:border-amber-500/40 transition-colors">
             <div class="text-3xl sm:text-4xl font-extrabold text-amber-400">50%</div>
             <div class="text-xs font-bold text-slate-200 uppercase tracking-wider">Support Tickets ↓</div>
             <div class="text-[11px] text-slate-400">GenAI Support Chatbot</div>
           </div>
 
-          <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 space-y-1 col-span-2 md:col-span-1">
+          <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 space-y-1 col-span-2 md:col-span-1 hover:border-purple-500/40 transition-colors">
             <div class="text-3xl sm:text-4xl font-extrabold text-purple-400">10+ GB</div>
             <div class="text-xs font-bold text-slate-200 uppercase tracking-wider">Daily Spark Data</div>
             <div class="text-[11px] text-slate-400">AWS EMR & Airflow Clusters</div>
@@ -267,7 +285,7 @@
     <!-- END SECTION: IMPACT METRICS -->
 
     <!-- SECTION: SYSTEMS I'VE BUILT -->
-    <section id="systems" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-b border-slate-800/80">
+    <section id="systems" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-b border-slate-800/80 bg-grid-pattern relative">
       <div class="space-y-3 mb-12">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-sky-500/10 text-sky-400 text-xs font-mono font-semibold uppercase">
           Architecture Core
@@ -279,10 +297,10 @@
       <div class="grid md:grid-cols-2 gap-8">
         
         <!-- System Card 1 -->
-        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 card-hover space-y-5">
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 card-hover space-y-5">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center font-bold">
+              <div class="w-10 h-10 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center font-bold">
                 <i class="fa-solid fa-diagram-project"></i>
               </div>
               <div>
@@ -294,19 +312,19 @@
           <p class="text-sm text-slate-300 leading-relaxed">
             Designed no-code and code-first multi-agent frameworks leveraging stateful graphs, model-context-protocol (MCP) servers, tool delegation, and human-in-the-loop governance bounds.
           </p>
-          <div class="flex flex-wrap gap-2 text-xs font-mono text-sky-300">
-            <span class="px-2.5 py-1 rounded bg-slate-800">LangGraph</span>
-            <span class="px-2.5 py-1 rounded bg-slate-800">Pydantic-AI</span>
-            <span class="px-2.5 py-1 rounded bg-slate-800">Google ADK</span>
-            <span class="px-2.5 py-1 rounded bg-slate-800">MCP</span>
+          <div class="flex flex-wrap gap-2 text-xs font-mono">
+            <span class="px-2.5 py-1 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30">LangGraph</span>
+            <span class="px-2.5 py-1 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30">Pydantic-AI</span>
+            <span class="px-2.5 py-1 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30">Google ADK</span>
+            <span class="px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">MCP Protocol</span>
           </div>
         </div>
 
         <!-- System Card 2 -->
-        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 card-hover space-y-5">
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 card-hover space-y-5">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center font-bold">
+              <div class="w-10 h-10 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center font-bold">
                 <i class="fa-solid fa-database"></i>
               </div>
               <div>
@@ -318,16 +336,16 @@
           <p class="text-sm text-slate-300 leading-relaxed">
             Architected enterprise retrieval systems integrating Azure AI Search and Qdrant. Reduced information retrieval latency by 70% with semantic reranking and exact source attribution.
           </p>
-          <div class="flex flex-wrap gap-2 text-xs font-mono text-indigo-300">
-            <span class="px-2.5 py-1 rounded bg-slate-800">Azure AI Search</span>
-            <span class="px-2.5 py-1 rounded bg-slate-800">Qdrant</span>
-            <span class="px-2.5 py-1 rounded bg-slate-800">ChromaDB</span>
-            <span class="px-2.5 py-1 rounded bg-slate-800">Redis Cache</span>
+          <div class="flex flex-wrap gap-2 text-xs font-mono">
+            <span class="px-2.5 py-1 rounded bg-sky-500/20 text-sky-300 border border-sky-500/30">Azure AI Search</span>
+            <span class="px-2.5 py-1 rounded bg-sky-500/20 text-sky-300 border border-sky-500/30">Qdrant Vector</span>
+            <span class="px-2.5 py-1 rounded bg-sky-500/20 text-sky-300 border border-sky-500/30">ChromaDB</span>
+            <span class="px-2.5 py-1 rounded bg-sky-500/20 text-sky-300 border border-sky-500/30">Redis Cache</span>
           </div>
         </div>
 
         <!-- System Card 3 -->
-        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 card-hover space-y-5">
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 card-hover space-y-5">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-3">
               <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold">
@@ -342,16 +360,16 @@
           <p class="text-sm text-slate-300 leading-relaxed">
             End-to-end model governance utilizing Databricks Unity Catalog, Delta Live Tables, MLflow model registries, and Docker/Kubernetes container orchestration on AWS & OpenShift.
           </p>
-          <div class="flex flex-wrap gap-2 text-xs font-mono text-emerald-300">
-            <span class="px-2.5 py-1 rounded bg-slate-800">Databricks</span>
-            <span class="px-2.5 py-1 rounded bg-slate-800">MLflow</span>
-            <span class="px-2.5 py-1 rounded bg-slate-800">Docker</span>
-            <span class="px-2.5 py-1 rounded bg-slate-800">AWS EKS</span>
+          <div class="flex flex-wrap gap-2 text-xs font-mono">
+            <span class="px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Databricks</span>
+            <span class="px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">MLflow</span>
+            <span class="px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Docker</span>
+            <span class="px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">AWS EKS</span>
           </div>
         </div>
 
         <!-- System Card 4 -->
-        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 card-hover space-y-5">
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 card-hover space-y-5">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-3">
               <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold">
@@ -366,11 +384,11 @@
           <p class="text-sm text-slate-300 leading-relaxed">
             High-throughput distributed data pipelines built with PySpark on AWS EMR, real-time event ingestion via Apache Kafka, and automated Airflow DAG cluster lifecycle management.
           </p>
-          <div class="flex flex-wrap gap-2 text-xs font-mono text-amber-300">
-            <span class="px-2.5 py-1 rounded bg-slate-800">PySpark</span>
-            <span class="px-2.5 py-1 rounded bg-slate-800">Kafka</span>
-            <span class="px-2.5 py-1 rounded bg-slate-800">Airflow</span>
-            <span class="px-2.5 py-1 rounded bg-slate-800">Snowflake</span>
+          <div class="flex flex-wrap gap-2 text-xs font-mono">
+            <span class="px-2.5 py-1 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">PySpark</span>
+            <span class="px-2.5 py-1 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">Kafka</span>
+            <span class="px-2.5 py-1 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">Airflow</span>
+            <span class="px-2.5 py-1 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">Snowflake</span>
           </div>
         </div>
 
@@ -396,7 +414,7 @@
             <div>
               <div class="flex items-center gap-3">
                 <h3 class="text-2xl font-bold text-white">RagForge</h3>
-                <span class="px-3 py-1 rounded-full bg-sky-500/10 text-sky-400 text-xs font-mono font-semibold">Autonomous Agent</span>
+                <span class="px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-mono font-semibold">Autonomous Agent</span>
               </div>
               <p class="text-sm text-slate-400 mt-1">Autonomous Local ReAct RAG & Project Management Agent</p>
             </div>
@@ -406,29 +424,60 @@
             </a>
           </div>
 
-          <!-- Architecture Visual Diagram -->
+          <!-- Modern Visual Flow Diagram Card -->
           <div class="space-y-2">
-            <h4 class="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider">System Flow Architecture</h4>
-            <div class="p-4 rounded-xl bg-slate-950 border border-slate-800/90 font-mono text-xs text-sky-300 overflow-x-auto leading-relaxed">
-<pre>
-┌──────────────┐     ┌──────────────┐     ┌─────────────────────────────────────────┐
-│ User Query   │ ──► │ Global Agent │ ──► │ Planner Agent (LangGraph State Machine) │
-└──────────────┘     └──────────────┘     └────────────────────┬────────────────────┘
-                                                               │
-                     ┌─────────────────────────────────────────┼─────────────────────────────────────────┐
-                     ▼                                         ▼                                         ▼
-            ┌─────────────────┐                       ┌─────────────────┐                       ┌─────────────────┐
-            │ Qdrant Vector   │                       │ OpenProject MCP │                       │ Local Ollama    │
-            │ Hybrid RAG      │                       │ Server Tools    │                       │ ReAct LLM       │
-            └─────────────────┘                       └─────────────────┘                       └─────────────────┘
-                     │                                         │                                         │
-                     └─────────────────────────────────────────┼─────────────────────────────────────────┘
-                                                               ▼
-                                                  ┌─────────────────────────┐
-                                                  │ Temporal.ai Workflows   │
-                                                  │ Telemetry (MLflow/Arize)│
-                                                  └─────────────────────────┘
-</pre>
+            <h4 class="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider">System Pipeline Architecture</h4>
+            <div class="p-5 rounded-2xl bg-slate-950 border border-slate-800 space-y-4">
+              <!-- Terminal Header -->
+              <div class="flex items-center justify-between border-b border-slate-800/80 pb-3">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+                  <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                  <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                </div>
+                <span class="text-[11px] font-mono text-slate-500">ragforge_pipeline_graph.py</span>
+              </div>
+
+              <!-- Graphic Nodes Grid -->
+              <div class="flex flex-wrap items-center justify-between gap-3 text-xs font-mono pt-2">
+                
+                <div class="p-3 rounded-xl bg-slate-900 border border-slate-700 text-slate-200 flex items-center gap-2">
+                  <i class="fa-solid fa-user text-sky-400"></i>
+                  <span>User Query</span>
+                </div>
+
+                <i class="fa-solid fa-arrow-right text-slate-500 pulse-arrow"></i>
+
+                <div class="p-3 rounded-xl bg-purple-950/60 border border-purple-500/40 text-purple-200 flex items-center gap-2 shadow-lg shadow-purple-500/10">
+                  <i class="fa-solid fa-network-wired text-purple-400"></i>
+                  <span>LangGraph Planner</span>
+                </div>
+
+                <i class="fa-solid fa-arrow-right text-slate-500 pulse-arrow"></i>
+
+                <div class="flex flex-col gap-2">
+                  <div class="p-2.5 rounded-lg bg-sky-950/60 border border-sky-500/40 text-sky-200 flex items-center gap-2">
+                    <i class="fa-solid fa-database text-sky-400"></i>
+                    <span>Qdrant Vector DB</span>
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-emerald-950/60 border border-emerald-500/40 text-emerald-200 flex items-center gap-2">
+                    <i class="fa-solid fa-plug text-emerald-400"></i>
+                    <span>OpenProject MCP</span>
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-700 text-slate-200 flex items-center gap-2">
+                    <i class="fa-solid fa-robot text-indigo-400"></i>
+                    <span>Local Ollama ReAct</span>
+                  </div>
+                </div>
+
+                <i class="fa-solid fa-arrow-right text-slate-500 pulse-arrow"></i>
+
+                <div class="p-3 rounded-xl bg-amber-950/60 border border-amber-500/40 text-amber-200 flex items-center gap-2">
+                  <i class="fa-solid fa-chart-line text-amber-400"></i>
+                  <span>Temporal & Telemetry</span>
+                </div>
+
+              </div>
             </div>
           </div>
 
@@ -442,10 +491,10 @@
             <div class="space-y-2">
               <h4 class="text-sm font-bold text-white">Key Engineering Highlights</h4>
               <ul class="text-xs text-slate-300 space-y-1.5">
-                <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-sky-400"></i> Local ReAct multi-agent graph with LangGraph</li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-sky-400"></i> Model Context Protocol (MCP) server integration</li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-sky-400"></i> Robust ETL orchestration with Temporal.ai</li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-sky-400"></i> Telemetry & tracing via MLflow & Arize Phoenix</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-purple-400"></i> Local ReAct multi-agent graph with LangGraph</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-purple-400"></i> Model Context Protocol (MCP) server integration</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-purple-400"></i> Robust ETL orchestration with Temporal.ai</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-purple-400"></i> Telemetry & tracing via MLflow & Arize Phoenix</li>
               </ul>
             </div>
           </div>
@@ -467,16 +516,57 @@
             </a>
           </div>
 
-          <!-- Architecture Visual Diagram -->
+          <!-- Modern Visual Flow Diagram Card -->
           <div class="space-y-2">
             <h4 class="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider">Computer Vision Pipeline</h4>
-            <div class="p-4 rounded-xl bg-slate-950 border border-slate-800/90 font-mono text-xs text-emerald-300 overflow-x-auto leading-relaxed">
-<pre>
-Input Image ──► [ YOLOv8 Object Bounding ] ──► [ SAM Segmenter ] ──► [ CLIPSeg Zero-Shot Classifier ]
-                                                                                  │
-                                                                                  ▼
-Interactive Notebook HTML Visualizer ◄── [ Transparent PNG Cutout Extraction ] ◄──┘
-</pre>
+            <div class="p-5 rounded-2xl bg-slate-950 border border-slate-800 space-y-4">
+              <!-- Terminal Header -->
+              <div class="flex items-center justify-between border-b border-slate-800/80 pb-3">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+                  <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                  <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                </div>
+                <span class="text-[11px] font-mono text-slate-500">vision_cutout_pipeline.py</span>
+              </div>
+
+              <!-- Graphic Nodes Grid -->
+              <div class="flex flex-wrap items-center justify-between gap-3 text-xs font-mono pt-2">
+                
+                <div class="p-3 rounded-xl bg-slate-900 border border-slate-700 text-slate-200 flex items-center gap-2">
+                  <i class="fa-solid fa-image text-emerald-400"></i>
+                  <span>Input Image</span>
+                </div>
+
+                <i class="fa-solid fa-arrow-right text-slate-500 pulse-arrow"></i>
+
+                <div class="p-3 rounded-xl bg-emerald-950/60 border border-emerald-500/40 text-emerald-200 flex items-center gap-2 shadow-lg shadow-emerald-500/10">
+                  <i class="fa-solid fa-vector-square text-emerald-400"></i>
+                  <span>YOLOv8 Detection</span>
+                </div>
+
+                <i class="fa-solid fa-arrow-right text-slate-500 pulse-arrow"></i>
+
+                <div class="p-3 rounded-xl bg-indigo-950/60 border border-indigo-500/40 text-indigo-200 flex items-center gap-2">
+                  <i class="fa-solid fa-scissors text-indigo-400"></i>
+                  <span>SAM Segmenter</span>
+                </div>
+
+                <i class="fa-solid fa-arrow-right text-slate-500 pulse-arrow"></i>
+
+                <div class="p-3 rounded-xl bg-sky-950/60 border border-sky-500/40 text-sky-200 flex items-center gap-2">
+                  <i class="fa-solid fa-eye text-sky-400"></i>
+                  <span>CLIPSeg Zero-Shot</span>
+                </div>
+
+                <i class="fa-solid fa-arrow-right text-slate-500 pulse-arrow"></i>
+
+                <div class="p-3 rounded-xl bg-purple-950/60 border border-purple-500/40 text-purple-200 flex items-center gap-2">
+                  <i class="fa-solid fa-file-image text-purple-400"></i>
+                  <span>PNG Cutout + Viz</span>
+                </div>
+
+              </div>
             </div>
           </div>
 
@@ -516,16 +606,16 @@ Interactive Notebook HTML Visualizer ◄── [ Transparent PNG Cutout Extracti
         
         <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
           <h3 class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
-            <i class="fa-solid fa-robot text-sky-400"></i>
+            <i class="fa-solid fa-robot text-purple-400"></i>
             <span>AI Systems & Agents</span>
           </h3>
           <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-xs font-mono text-slate-200">Agentic Workflows</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-xs font-mono text-slate-200">LangGraph</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-xs font-mono text-slate-200">RAG Architectures</span>
+            <span class="px-3 py-1.5 rounded-lg bg-purple-500/10 text-purple-300 border border-purple-500/20 text-xs font-mono">Agentic Workflows</span>
+            <span class="px-3 py-1.5 rounded-lg bg-purple-500/10 text-purple-300 border border-purple-500/20 text-xs font-mono">LangGraph</span>
+            <span class="px-3 py-1.5 rounded-lg bg-sky-500/10 text-sky-300 border border-sky-500/20 text-xs font-mono">RAG Architectures</span>
             <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-xs font-mono text-slate-200">Pydantic-AI</span>
             <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-xs font-mono text-slate-200">Google ADK</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-xs font-mono text-slate-200">MCP Servers</span>
+            <span class="px-3 py-1.5 rounded-lg bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 text-xs font-mono">MCP Servers</span>
           </div>
         </div>
 
@@ -535,8 +625,8 @@ Interactive Notebook HTML Visualizer ◄── [ Transparent PNG Cutout Extracti
             <span>ML & Deep Learning</span>
           </h3>
           <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-xs font-mono text-slate-200">PyTorch</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-xs font-mono text-slate-200">TensorFlow</span>
+            <span class="px-3 py-1.5 rounded-lg bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 text-xs font-mono">PyTorch</span>
+            <span class="px-3 py-1.5 rounded-lg bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 text-xs font-mono">TensorFlow</span>
             <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-xs font-mono text-slate-200">Transformers</span>
             <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-xs font-mono text-slate-200">YOLOv8 / SAM</span>
             <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-xs font-mono text-slate-200">Scikit-learn</span>
@@ -550,11 +640,11 @@ Interactive Notebook HTML Visualizer ◄── [ Transparent PNG Cutout Extracti
             <span>Data & Infrastructure</span>
           </h3>
           <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-xs font-mono text-slate-200">PySpark</span>
+            <span class="px-3 py-1.5 rounded-lg bg-amber-500/10 text-amber-300 border border-amber-500/20 text-xs font-mono">PySpark</span>
             <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-xs font-mono text-slate-200">Kafka</span>
             <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-xs font-mono text-slate-200">Airflow</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-xs font-mono text-slate-200">Databricks</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-xs font-mono text-slate-200">MLflow</span>
+            <span class="px-3 py-1.5 rounded-lg bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 text-xs font-mono">Databricks</span>
+            <span class="px-3 py-1.5 rounded-lg bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 text-xs font-mono">MLflow</span>
             <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-xs font-mono text-slate-200">Docker & K8s</span>
           </div>
         </div>
