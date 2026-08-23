@@ -23,7 +23,39 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Theme Switcher Setup (Dark/Light mode)
   initThemeSwitcher();
+
+  // Initialize Copy to Clipboard Buttons
+  initCopyButtons();
 });
+
+/**
+ * Copies text to clipboard and shows quick feedback tooltip
+ */
+function initCopyButtons() {
+  const copyBtns = document.querySelectorAll('.js-copy-btn');
+  copyBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const textToCopy = btn.getAttribute('data-copy-text');
+      if (!textToCopy) return;
+
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        const feedbackEl = btn.querySelector('.js-copy-feedback');
+        if (feedbackEl) {
+          const originalText = feedbackEl.innerText;
+          feedbackEl.innerText = 'Copied!';
+          btn.classList.add('border-emerald-500/60', 'text-emerald-400');
+          setTimeout(() => {
+            feedbackEl.innerText = originalText;
+            btn.classList.remove('border-emerald-500/60', 'text-emerald-400');
+          }, 2000);
+        }
+      }).catch(err => {
+        console.error('Clipboard copy failed:', err);
+      });
+    });
+  });
+}
 
 /**
  * Automatically binds all resume download buttons/links to the CONFIG path
